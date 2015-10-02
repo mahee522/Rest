@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>RestApps</display-name>
+  
+  <servlet>
+    <servlet-name>Jersey REST Service</servlet-name>
+    	<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    		<init-param>
+      	 		 <param-name>jersey.config.server.provider.packages</param-name>
+      	 		 <param-value>com.path</param-value>
+  	  		</init-param>
+  	  		
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+    <servlet-mapping>
+  		  <servlet-name>Jersey REST Service</servlet-name>
+   		  <url-pattern>/app/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Jersey REST </servlet-name>
+    	<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    		<init-param>
+      	 		 <param-name>jersey.config.server.provider.packages</param-name>
+      	 		 <param-value>com.query</param-value>
+  	  		</init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+    <servlet-mapping>
+  		  <servlet-name>Jersey REST </servlet-name>
+   		  <url-pattern>/appl/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Jersey  </servlet-name>
+    	<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    		<init-param>
+      	 		 <param-name>jersey.config.server.provider.packages</param-name>
+      	 		 <param-value>com.form</param-value>
+  	  		</init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+    <servlet-mapping>
+  		  <servlet-name>Jersey  </servlet-name>
+   		  <url-pattern>/appform/*</url-pattern>
+  </servlet-mapping>
+</web-app>
